@@ -24,18 +24,18 @@ $(document).ready(function(){
 			text = text.replaceAll('Cr.รูปภาพ อีสานบ้านนา',''); // chunk and remove all zero space
 			text = text.replaceAll('Cr.รูปภาพ วิชา วันนี้',''); // chunk and remove all zero space
 			text = text.replaceAll('Cr.รูปภาพ มาดูวิชา 365',''); // chunk and remove all zero space
-			/*
-			text = text.replaceAll('1','1️⃣️');
-			text = text.replaceAll('2','1️⃣️');
-			text = text.replaceAll('3','3️⃣');
-			text = text.replaceAll('4','4️⃣');
-			text = text.replaceAll('5','5️⃣');
-			text = text.replaceAll('6','6️⃣');
-			text = text.replaceAll('7','7️⃣');
-			text = text.replaceAll('8','8️⃣');
-			text = text.replaceAll('9','9️⃣');
-			text = text.replaceAll('10','🔟');
-			*/
+			
+			text = text.replaceAll('0','๐');
+			text = text.replaceAll('1','๑');
+			text = text.replaceAll('2','๒');
+			text = text.replaceAll('3','๓');
+			text = text.replaceAll('4','๔');
+			text = text.replaceAll('5','๕');
+			text = text.replaceAll('6','๖');
+			text = text.replaceAll('7','๗');
+			text = text.replaceAll('8','๘');
+			text = text.replaceAll('9','๙');
+			
 			
 			// Add/Remove zero with space
 			if ($('#chb_addzs').is(':checked')) {
