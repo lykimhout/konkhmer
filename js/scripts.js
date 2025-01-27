@@ -14,7 +14,10 @@ $(document).ready(function(){
 
 		setTimeout(function() {
 			// gets the copied text after a specified time (100 milliseconds)
-			var text = elem.val(); 
+			var text = elem.val();
+			
+			if(text.length == 0) return;
+			
 			text = text.replace(/\u200B/g,''); // chunk and remove all zero space
 			text = text.replace(/\￼/g,''); // chunk and remove all zero space
 			text = text.replaceAll('*',''); // chunk and remove all *
