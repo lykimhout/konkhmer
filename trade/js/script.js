@@ -2,27 +2,25 @@
 
 
 
-// Loading file system(fs) module
-var fs = require("fs");
+function readJsonFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
 
-// Reading json file asynchronously
-fs.readFile("../database/data.json", function(err, data){
-
-	if(err){ // If error occurred while reading file
-		console.log("Error occured while reading json file");
-	} else {
-		var jsonObj = JSON.parse(data);
-		console.log(jsonObj);
-		console.log()	// new line
-		console.log(typeof jsonObj);
-
-		// Iterating over keys to print the values referred by them
-		for(let key in jsonObj){
-			console.log(key, jsonObj[key]);
-		}
-	}
-})
-
+readJsonFile("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(text){
+    var data = JSON.parse(text);
+    console.log(data);
+    //alert(data[0].data);
+    //var elem = document.getElementById("datadisplay");
+    //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
+});
 
 
 $(document).ready(function(){
