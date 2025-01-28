@@ -2,7 +2,7 @@
 	{
 	"id":1,
 	"detail":{
-			"coint_ype":"BNB",
+			"coint_type":"BNB",
 			"order_date":"27 Jan 2025",
 			"order_price":"639.8692",
 			"order_amount":"0.1",
@@ -13,7 +13,7 @@
 	{
 	"id":2,
 	"detail":{
-			"coint_ype":"CAKE",
+			"coint_type":"CAKE",
 			"order_date":"27 Jan 2025",
 			"order_price":"1.834",
 			"order_amount":"20",
