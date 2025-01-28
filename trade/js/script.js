@@ -40,6 +40,6 @@ $(document).ready(function(){
 		});
 		
 		$("#tbl_history").append(result);
-		console.log(maxid);
+		
 	});
 });
