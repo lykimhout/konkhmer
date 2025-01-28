@@ -22,10 +22,11 @@ readJsonFile("https://lykimhout.github.io/konkhmer/trade/database/data.json", fu
     //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
 });
 
+$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(json) {
+		console.log(json); 
+	});
 
 $(document).ready(function(){
 	console.log("test");
-	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(json) {
-		console.log(json); 
-	});
+	
 });
