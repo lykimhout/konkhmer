@@ -26,11 +26,11 @@ $(document).ready(function(){
 			*/
 			
 			result += "<tr>";
-			result += "<td>" + data[i].detail["coint_type"]+"</td">;
-			result += "<td>" + data[i].detail["order_date"]+"</td">;
-			result += "<td>" + data[i].detail["order_price"]+"</td">;
-			result += "<td>" + data[i].detail["order_amount"]+"</td">;
-			result += "<td>" + data[i].detail["total"]+"</td">;
+			result += "<td>" + data[i].detail["coint_type"]+"</td>";
+			result += "<td>" + data[i].detail["order_date"]+"</td>";
+			result += "<td>" + data[i].detail["order_price"]+"</td>";
+			result += "<td>" + data[i].detail["order_amount"]+"</td>";
+			result += "<td>" + data[i].detail["total"]+"</td>";
 			result += "</tr>";			
 		});
 		
