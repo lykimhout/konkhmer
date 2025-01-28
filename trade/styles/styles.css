@@ -21,7 +21,7 @@ html {font-family: "Lucida Sans", sans-serif;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.tbl_history{font-family: "Khmer", serif;border-spacing:unset;text-align:center;}
+.tbl_history{font-family: "Noto Serif Khmer", serif;border-spacing:unset;text-align:center;}
 .tbl_history tr th{border-left:1px solid #ccc;border-right:1px solid #ccc}
 .tbl_history tr td{border:1px solid #ccc;border-top:none;font-family:"sans-serif";text-align:right}
 .tbl_history tr td:first-child{text-align:center}
