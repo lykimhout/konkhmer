@@ -21,6 +21,9 @@ html {font-family: "Lucida Sans", sans-serif;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.dv_addcoin{display:block}
+
+
 .tbl_history{font-family: "Noto Serif Khmer", serif;border-spacing:unset;text-align:center;}
 .tbl_history tr th{border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;font-weight:500;text-decoration:underline;height:30px}
 .tbl_history tr td{width:20%;border:1px solid #ccc;border-top:none;font-family:"monospace";text-align:right;word-wrap:break-word}
