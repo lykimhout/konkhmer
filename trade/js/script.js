@@ -43,9 +43,17 @@ $(document).ready(function(){
 		
 	});
 	
-	
+	var isaddnewcoin = 0;
 	$('#btn_addcoin').click(function(){
 		//$('#tbl_history tr:first').after('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
-		$("#dv_addcoin").fadeIn();
+		
+		if(isaddnewcoin == 0){
+			isaddnewcoin =1;
+			$("#dv_addcoin").fadeIn();
+			$(this).text="-";
+		}else{
+			$("#dv_addcoin").fadeOut();
+			$(this).text="+";
+		}
 	});
 });
