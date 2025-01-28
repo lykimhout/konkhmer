@@ -42,4 +42,9 @@ $(document).ready(function(){
 		$("#tbl_history").append(result);
 		
 	});
+	
+	
+	$('#btn_addcoin').click(function(){
+		$('#tbl_history tr:first').after('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
+	});
 });
