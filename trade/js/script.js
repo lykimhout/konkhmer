@@ -65,27 +65,27 @@ $(document).ready(function(){
 		var orderamount = $("#txt_orderamount").val();
 		var ordertotal = $("#txt_ordertotal").val();
 
-		fs.readFile('results.json', function (err, data) {
-			var json = JSON.parse(data);
-			
-			$.each(json, function(i, item) {
+		fs.readFile('../database/data.json', function (err, data) {
+			// store original max id
+			$.each(data, function(i, item) {
 				// store the max id
-				if (parseInt(json[i].id) > maxid) {
-					maxid = parseInt(json[i].id);
+				if (parseInt(data[i].id) > maxid) {
+					maxid = parseInt(data[i].id);
 				}
 			});
 			maxid = maxid+1;
-						
-			data.unshift({'id':maxid, 'clear_trade':'0',"detail":{
+			
+			console.log(maxid);
+			
+			var json = JSON.parse(data);						
+			json.unshift({'id':maxid, 'clear_trade':'0',"detail":{
 				"coint_type":coinname,
 				"order_date":orderdate,
 				"order_price":orderprice,
 				"order_amount":orderamount,
 				"total":ordertotal
 			}});
-			
-
-			fs.writeFile("results.json", JSON.stringify(json))
+			fs.writeFile("../database/data.json", JSON.stringify(json))
 		})
 	});
 });
