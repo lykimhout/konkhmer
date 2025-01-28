@@ -45,6 +45,7 @@ $(document).ready(function(){
 	
 	
 	$('#btn_addcoin').click(function(){
-		$('#tbl_history tr:first').after('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
+		//$('#tbl_history tr:first').after('<tr><td></td><td></td><td></td><td></td><td></td></tr>');
+		$("#dv_addcoin").fadeIn();
 	});
 });
