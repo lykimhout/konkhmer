@@ -33,7 +33,7 @@ html {font-family: "Lucida Sans", sans-serif;}
 
 .btn_addcoin{display:inline-block;padding:5px 10px;margin-right:5px;background:#ccc;line-height:0.9em;cursor:pointer}
 
-.btn_insert{display:inline-block;padding:3px 5px}
+.btn_insert{display:inline-block;padding:3px 7px;background:#ccc}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
