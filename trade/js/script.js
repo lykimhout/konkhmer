@@ -50,10 +50,11 @@ $(document).ready(function(){
 		if(isaddnewcoin == 0){
 			isaddnewcoin =1;
 			$("#dv_addcoin").fadeIn();
-			$(this).text="-";
+			$(this).text("-");
 		}else{
+			isaddnewcoin =0;
 			$("#dv_addcoin").fadeOut();
-			$(this).text="+";
+			$(this).text("+");
 		}
 	});
 	
