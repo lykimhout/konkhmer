@@ -64,12 +64,26 @@ $(document).ready(function(){
 		var orderprice = $("#txt_orderprice").val();
 		var orderamount = $("#txt_orderamount").val();
 		var ordertotal = $("#txt_ordertotal").val();
-		
-		var currentSearchResult = 'example'
 
 		fs.readFile('results.json', function (err, data) {
-			var json = JSON.parse(data)
-			json.push('search result: ' + currentSearchResult)
+			var json = JSON.parse(data);
+			
+			$.each(json, function(i, item) {
+				// store the max id
+				if (parseInt(json[i].id) > maxid) {
+					maxid = parseInt(json[i].id);
+				}
+			});
+			maxid = maxid+1;
+						
+			data.unshift({'id':maxid, 'clear_trade':'0',"detail":{
+				"coint_type":coinname,
+				"order_date":orderdate,
+				"order_price":orderprice,
+				"order_amount":orderamount,
+				"total":ordertotal
+			}});
+			
 
 			fs.writeFile("results.json", JSON.stringify(json))
 		})
