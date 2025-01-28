@@ -21,6 +21,8 @@ html {font-family: "Lucida Sans", sans-serif;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.tbl_history{font-family: "Khmer", serif;}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
