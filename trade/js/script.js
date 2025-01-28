@@ -1,7 +1,7 @@
 /* Place your JavaScript in this file */
 
 
-
+/*
 function readJsonFile(file, callback) {
     var rawFile = new XMLHttpRequest();
     rawFile.overrideMimeType("application/json");
@@ -21,12 +21,13 @@ readJsonFile("https://lykimhout.github.io/konkhmer/trade/database/data.json", fu
     //var elem = document.getElementById("datadisplay");
     //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
 });
+*/
 
-$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(json) {
-		console.log(json); 
-	});
 
 $(document).ready(function(){
 	console.log("test");
 	
+	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(json) {
+		console.log(json); 
+	});
 });
