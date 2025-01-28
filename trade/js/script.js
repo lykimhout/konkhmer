@@ -25,7 +25,7 @@ $(document).ready(function(){
 			// alert(data[i].id);
 			// alert(data[i].detail["coint_type"]);									
 			*/
-			
+			// store the max id
 			if (parseInt(data[i].id) > maxid) {
 				maxid = parseInt(data[i].id);
 			}
