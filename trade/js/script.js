@@ -6,7 +6,7 @@
 var fs = require("fs");
 
 // Reading json file asynchronously
-fs.readFile("./database/data.json", function(err, data){
+fs.readFile("../database/data.json", function(err, data){
 
 	if(err){ // If error occurred while reading file
 		console.log("Error occured while reading json file");
