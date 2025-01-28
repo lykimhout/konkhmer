@@ -1,7 +1,7 @@
 /* Place your JavaScript in this file */
 
 $(document).ready(function(){
-	const fsdata = require('../database/data.json');
+	//const fsdata = require('../database/data.json');
 	var result ="";
 	let maxid = 0;
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
