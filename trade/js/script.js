@@ -56,4 +56,22 @@ $(document).ready(function(){
 			$(this).text="+";
 		}
 	});
+	
+	$("#btn_insert").click(function(){
+		var fs = require('fs')
+		var coinname = $("#txt_coinname").val();
+		var orderdate = $("#txt_orderdate").val();
+		var orderprice = $("#txt_orderprice").val();
+		var orderamount = $("#txt_orderamount").val();
+		var ordertotal = $("#txt_ordertotal").val();
+		
+		var currentSearchResult = 'example'
+
+		fs.readFile('results.json', function (err, data) {
+			var json = JSON.parse(data)
+			json.push('search result: ' + currentSearchResult)
+
+			fs.writeFile("results.json", JSON.stringify(json))
+		})
+	});
 });
