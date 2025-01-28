@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 	var result ="";
+	let maxid = 0;
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
 			/*
 			[
@@ -25,6 +26,10 @@ $(document).ready(function(){
 			// alert(data[i].detail["coint_type"]);									
 			*/
 			
+			if (parseInt(data[i].id) > maxid) {
+				maxid = parseInt(data[i].id);
+			}
+			
 			result += "<tr>";
 			result += "<td>" + data[i].detail["coint_type"]+"</td>";
 			result += "<td>" + data[i].detail["order_date"]+"</td>";
@@ -35,6 +40,6 @@ $(document).ready(function(){
 		});
 		
 		$("#tbl_history").append(result);
-		
+		console.log(maxid);
 	});
 });
