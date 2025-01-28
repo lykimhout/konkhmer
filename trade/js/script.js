@@ -1,6 +1,7 @@
 /* Place your JavaScript in this file */
 
 $(document).ready(function(){
+	const fsdata = require('../database/data.json');
 	var result ="";
 	let maxid = 0;
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
@@ -59,14 +60,14 @@ $(document).ready(function(){
 	});
 	
 	$("#btn_insert").click(function(){
-		var fs = require('fs')
+		
 		var coinname = $("#txt_coinname").val();
 		var orderdate = $("#txt_orderdate").val();
 		var orderprice = $("#txt_orderprice").val();
 		var orderamount = $("#txt_orderamount").val();
 		var ordertotal = $("#txt_ordertotal").val();
 
-		fs.readFile('../database/data.json', function (err, data) {
+		fsdata.readFile('../database/data.json', function (err, data) {
 			var json = JSON.parse(data);
 			// store original max id
 			$.each(json, function(i, item) {
@@ -86,7 +87,7 @@ $(document).ready(function(){
 				"order_amount":orderamount,
 				"total":ordertotal
 			}});
-			fs.writeFile("../database/data.json", JSON.stringify(json))
+			fsdata.writeFile("../database/data.json", JSON.stringify(json))
 		})
 	});
 });
