@@ -1,8 +1,7 @@
 /* Place your JavaScript in this file */
 
 $(document).ready(function(){
-	console.log("test");
-	
+	var result ="";
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
 			/*
 			[
@@ -26,9 +25,16 @@ $(document).ready(function(){
 			// alert(data[i].detail["coint_type"]);									
 			*/
 			
-			
-			
-			
+			result += "<tr>";
+			result += "<td>" + data[i].detail["coint_type"]+"</td">;
+			result += "<td>" + data[i].detail["order_date"]+"</td">;
+			result += "<td>" + data[i].detail["order_price"]+"</td">;
+			result += "<td>" + data[i].detail["order_amount"]+"</td">;
+			result += "<td>" + data[i].detail["total"]+"</td">;
+			result += "</tr>";			
 		});
+		
+		$("#tbl_history").append(result);
+		
 	});
 });
