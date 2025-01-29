@@ -4,7 +4,7 @@ $(document).ready(function(){
 	
 	var result ="";
 	let maxid = 0;
-	const arrdata= [];
+	var arrdata= [];
 	
 	// for loading json to Array visit this url (https://stackoverflow.com/questions/33328779/javascript-jquery-push-json-objects-into-array)
 	
