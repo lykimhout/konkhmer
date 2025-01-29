@@ -27,7 +27,6 @@ $(document).ready(function(){
 		// store database into array data;
 		arrdata = data;
 		
-		console.log(arrdata);
 		
 		$.each(data, function(i, item) {
 			/*			
@@ -97,6 +96,8 @@ $(document).ready(function(){
 				"order_amount":orderamount,
 				"total":ordertotal
 			}});
+			
+			fs.writeFileSync("../database/data.json", JSON.stringify(arrdata));
 			
 			console.log(arrdata);
 			
