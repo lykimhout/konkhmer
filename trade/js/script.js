@@ -1,9 +1,11 @@
 /* Place your JavaScript in this file */
 
 $(document).ready(function(){
-	//const fsdata = require('../database/data.json');
+	
 	var result ="";
 	let maxid = 0;
+	// for loading json to Array visit this url (https://stackoverflow.com/questions/33328779/javascript-jquery-push-json-objects-into-array)
+	
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
 			/*
 			[
@@ -60,6 +62,7 @@ $(document).ready(function(){
 	});
 	
 	$("#btn_insert").click(function(){
+		const fsdata = require('jsonfile');
 		
 		var coinname = $("#txt_coinname").val();
 		var orderdate = $("#txt_orderdate").val();
@@ -68,6 +71,9 @@ $(document).ready(function(){
 		var ordertotal = $("#txt_ordertotal").val();
 
 		fsdata.readFile('../database/data.json', function (err, data) {
+			if (err) console.error(err)
+			console.dir(data);
+		
 			var json = JSON.parse(data);
 			// store original max id
 			$.each(json, function(i, item) {
