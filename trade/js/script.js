@@ -62,7 +62,7 @@ $(document).ready(function(){
 	});
 	
 	$("#btn_insert").click(function(){
-		const fsdata = require('jsonfile');
+		const fsdata = require('fs');
 		
 		var coinname = $("#txt_coinname").val();
 		var orderdate = $("#txt_orderdate").val();
