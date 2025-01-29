@@ -82,17 +82,15 @@ $(document).ready(function(){
 		
 			//var json = JSON.parse(data);
 			// store original max id
-			$.each(json, function(i, item) {
+			$.each(arrdata, function(i, item) {
 				// store the max id
-				if (parseInt(json[i].id) > maxid) {
-					maxid = parseInt(json[i].id);
+				if (parseInt(arrdata[i].id) > maxid) {
+					maxid = parseInt(arrdata[i].id);
 				}
 			});
 			maxid = maxid+1;
-			
-			
-			
-			json.unshift({'id':maxid, 'clear_trade':'0',"detail":{
+					
+			arrdata.unshift({'id':maxid, 'clear_trade':'0',"detail":{
 				"coint_type":coinname,
 				"order_date":orderdate,
 				"order_price":orderprice,
@@ -100,7 +98,7 @@ $(document).ready(function(){
 				"total":ordertotal
 			}});
 			
-			
+			console.log(arrdata);
 			
 			//fsdata.writeFile("../database/data.json", JSON.stringify(json))
 		//})
