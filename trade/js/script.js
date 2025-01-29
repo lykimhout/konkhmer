@@ -97,7 +97,6 @@ $(document).ready(function(){
 				"total":ordertotal
 			}});
 			
-			fs.writeFileSync("../database/data.json", JSON.stringify(arrdata));
 			
 			console.log(arrdata);
 			
