@@ -1,5 +1,4 @@
 /* Place your JavaScript in this file */
-import fs from 'fs';
 
 $(document).ready(function(){
 	
