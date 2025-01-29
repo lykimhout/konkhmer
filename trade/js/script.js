@@ -4,24 +4,31 @@ $(document).ready(function(){
 	
 	var result ="";
 	let maxid = 0;
+	const arrdata= [];
+	
 	// for loading json to Array visit this url (https://stackoverflow.com/questions/33328779/javascript-jquery-push-json-objects-into-array)
 	
 	$.getJSON("https://lykimhout.github.io/konkhmer/trade/database/data.json", function(data) {
-			/*
-			[
-				{
-				"id":1,
-				"detail":{
-						"coint_type":"BNB",
-						"order_date":"27 Jan 2025",
-						"order_price":"639.8692",
-						"order_amount":"0.1",
-						"total":"63.98692"
-						}
+		/*
+		[
+			{
+			"id":1,
+			"detail":{
+					"coint_type":"BNB",
+					"order_date":"27 Jan 2025",
+					"order_price":"639.8692",
+					"order_amount":"0.1",
+					"total":"63.98692"
+					}
 
-				},
-			]
-			*/
+			},
+		]
+		*/
+		// store database into array data;
+		arrdata = data;
+		
+		console.log(arrdata);
+		
 		$.each(data, function(i, item) {
 			/*			
 			//Example Data:
@@ -62,7 +69,7 @@ $(document).ready(function(){
 	});
 	
 	$("#btn_insert").click(function(){
-		const fsdata = require('fs');
+		//const fsdata = require('fs');
 		
 		var coinname = $("#txt_coinname").val();
 		var orderdate = $("#txt_orderdate").val();
@@ -70,11 +77,10 @@ $(document).ready(function(){
 		var orderamount = $("#txt_orderamount").val();
 		var ordertotal = $("#txt_ordertotal").val();
 
-		fsdata.readFile('../database/data.json', function (err, data) {
-			if (err) console.error(err)
-			console.dir(data);
+		//fsdata.readFile('../database/data.json', function (err, data) {
+			
 		
-			var json = JSON.parse(data);
+			//var json = JSON.parse(data);
 			// store original max id
 			$.each(json, function(i, item) {
 				// store the max id
@@ -84,7 +90,7 @@ $(document).ready(function(){
 			});
 			maxid = maxid+1;
 			
-			console.log(maxid);
+			
 			
 			json.unshift({'id':maxid, 'clear_trade':'0',"detail":{
 				"coint_type":coinname,
@@ -93,7 +99,10 @@ $(document).ready(function(){
 				"order_amount":orderamount,
 				"total":ordertotal
 			}});
-			fsdata.writeFile("../database/data.json", JSON.stringify(json))
-		})
+			
+			
+			
+			//fsdata.writeFile("../database/data.json", JSON.stringify(json))
+		//})
 	});
 });
