@@ -13,7 +13,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer&display=swap" rel="stylesheet">
-
+        <script src="js/sweetalert.min.js"></script>
 </head>
 <body>
 <div class="dvwrap">
@@ -23,41 +23,50 @@
 	
 	<div class="row">
 		<div class="dv_addcoin" id="dv_addcoin">
+                        <form id="frmAddCoin">
 			<table>
 				<tr>
-					<td><label for="txt_coinname">ប្រភេទកាក់: </label></td>
-					<td><input type="text" value="" id="txt_coinname"></td>
+                                    <td><label for="txt_coinname">ប្រភេទកាក់: </label></td>
+					<td><input type="text" value="" id="txt_coinname" class="required"></td>
 				</tr>
 				<tr>
 					<td><label for="txt_orderdate">ថ្ងៃខែឆ្នាំ: </label></td>
-					<td><input type="text" value="" id="txt_orderdate"></td>
+					<td><input type="text" value="" id="txt_orderdate" class="required"></td>
 				</tr>
 				<tr>
-					<td><label for="txt_orderprice">តម្លៃពេលទិញ: </label></td>
-					<td><input type="text" value="" id="txt_orderprice"></td>
+					<td><label for="txt_orderprice">តម្លៃទិញ/លក់: </label></td>
+					<td><input type="text" value="" id="txt_orderprice" class="required"></td>
 				</tr>
 				<tr>
-					<td><label for="txt_orderamount">ចំនួនទិញ: </label></td>
-					<td><input type="text" value="" id="txt_orderamount"></td>
+					<td><label for="txt_orderamount">ចំនួនទិញ/លក់: </label></td>
+					<td><input type="text" value="" id="txt_orderamount" class="required"></td>
 				</tr>
+                                <tr>
+                                    <td><label for="cmbbuysell">ទិញ/លក់:</label></td>
+                                    <td>
+                                        <select name="cmbbuysell" id="cmbbuysell">
+                                          <option value="1">ទិញ</option>
+                                          <option value="0">លក់</option>                                          
+                                        </select></td>
+                                </tr>
 				<tr>
 					<td><label for="txt_ordertotal">សរុប: </label></td>
-					<td><input type="text" value="" id="txt_ordertotal"></td>
+					<td><input type="text" value="" id="txt_ordertotal" class="required"></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td><span id="btn_insert" class="btn_insert">រក្សាទុក</span></td>
 				</tr>
 			</table>
+                        </form>
 		</div>
 		
 		<table style="width:100%" id="tbl_history" class="tbl_history">
 		  <tr>
-			<th><span id="btn_addcoin" class="btn_addcoin">+</span>ប្រភេទកាក់</th>
-			<th>ថ្ងៃខែឆ្នាំ</th>
-			<th>តម្លៃពេលទិញ</th>
-			<th>ចំនួនទិញ</th>
-			<th>សរុប</th>
+                      <th><span id="btn_addcoin" class="btn_addcoin">+</span><span class="classpointer spn_theadname" data-sort="asc" data-name="coint_type"><span class="classtextdecoration">ប្រភេទកាក់</span><span class="spn_sorticon">&nbsp;▲</span></span></th>			
+                      <th><span class="classtextdecoration">តម្លៃទិញ/លក់</span></th>
+                        <th><span class="classtextdecoration">ចំនួន</span></th>
+                        <th><span class="classtextdecoration">សរុប</span></th>
 		  </tr>		  
 		</table>
 	</div> <!-- end div class row -->
