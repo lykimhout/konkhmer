@@ -220,6 +220,7 @@ $(document).ready(function () {
         if (objOption === "")
             objOption = "insertdata";
 
+        console.log(objArr);
         $.ajax({
             type: 'POST',
             url: './model/insertjson.php',
