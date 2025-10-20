@@ -1,0 +1,73 @@
+/* Place your CSS styles in this file */
+
+body{margin:0;padding:0;font-family: "Noto Serif Khmer", Serif;background-color: #1f2630;}
+html {font-family: "Lucida Sans", sans-serif;}
+.dvwrap{position:relative;margin:0 auto;max-width:1080px;font-family:arial;text-align:center}
+.header {display:none;background-color:#1f2630;color: #ffffff;padding:5px 10px;}
+
+.row::after {content: "";clear: both;display: block;}
+[class*="col-"] {float: left;padding: 15px;}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.classred{color:#ff5656}
+.classgreen{color:#00d300}
+.classpointer{cursor: pointer}
+.classtextdecoration{text-decoration: underline}
+.classtextleft{text-align: left !important}
+.classtextright{text-align: right !important}
+.class3dot{letter-spacing:-0.29em;padding-left:2px}
+.font_monospace{font-family:monospace}
+.font_size15em{font-size:1.5em}
+.dv_addcoin{display:none;margin:10px 0;padding-left: 5px;font-family: "Noto Serif Khmer", serif;text-align:left}
+.dv_addcoin table{color: #fff;}
+.dv_addcoin table input, .dv_addcoin table select{font-family: "Noto Serif Khmer", serif;width:150px;}
+.dv_addcoin table select{width:157px;}
+
+/* set transform:scale(1) to make child width stick with parent */
+.dvwrap_tbl_history{display:block;position:relative;-ms-overflow-style:none;scrollbar-width: none;height:500px;overflow-y:auto} 
+
+.tbl_history,.tbl_history_clone,.tbl_current_trade{font-family: "Noto Serif Khmer", serif;border-spacing:unset;text-align:center;font-size: 1.1em;color:#ffffff;}
+.tbl_history tr th,.tbl_history_clone tr th,.tbl_current_trade tr th{font-weight:500;height:30px;font-size:0.8em}
+.tbl_history tr td,.tbl_history_clone tr td,.tbl_current_trade tr td{border-top:1px solid #2b3139;font-family:monospace;text-align:right;word-wrap:break-word;vertical-align:middle;font-size:1em;}
+.tbl_history tr td span.spncoinname{float:left;font-weight: 600;font-size: 1.15em;padding:3px 0 3px 5px;}
+.tbl_history tr td span.spnorderdate{float:right;color: #b4b4b4;font-size: 0.9em;padding:5px 0 0 0;letter-spacing:-0.10em}
+.tbl_history tr td span.spnsubtotal,.tbl_history_clone tr td span.spnsubtotal,.tbl_current_trade tr td span.spnsubtotal{font-size: 1.15em;color: #00d300;padding-right: 5px;}
+.tbl_history tr td:first-child{text-align:left}
+.tbl_history tr:last-child td{padding-top:5px;}
+
+.btn_addcoin{display:inline-block;padding:3px 15px;margin-right:5px;background:#fcd437;line-height:0.9em;cursor:pointer;color:#1f2630;}
+
+.btn_insert{display:inline-block;padding:3px 7px;background:#fcd437;cursor: pointer;color:#1f2630;}
+.spn_sorticon{font-family: serif;font-size:0.7em;vertical-align:middle}
+.spnxbutton{color:#ff5656;font-size:0.9em}
+.spn_msg{font-size: 0.8em;font-family: monospace}
+
+.sweetalertbox_delete{font-family:monospace}
+
+.tbl_history nav {position: relative;float:right}
+.tbl_history nav ul.dropdown {display:none;position: absolute;top: 100%;margin:0;background:#1f2630;min-width:8em;padding: 0;border-radius: 0 0 .2em .2em;border:1px solid #5e656f;z-index: 1;li{list-style-type: none;a {color:#fff;text-decoration: none;padding: .5em .5em;display: block;font-size:0.9em};a:hover{background:#2e3336}}}
+
+.dv_clone_tbl_history {display:block;position:fixed;width:100%;max-width: 1080px;background:#1f2630;z-index:1}
+.dv_clone_tbl_history table{}
+.dv_clone_tbl_history table tr:last-child td {padding-top:1px}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
