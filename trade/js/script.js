@@ -426,6 +426,7 @@ $(document).ready(function () {
             $.each(objArr, function (i, item) {
                 if (parseInt(item.buysell) == 1 && parseInt(item.done_trade) == 0) {
                     var tmpDataId = item.id;
+                    console.log(item.detail['coin_type']+" - coin type \n");
                     var tmpDataName = item.detail['coin_type'].toUpperCase();
                     var tmpDataOrderPrice = parseFloat(item.detail['order_price']);
                     var tmpDataAmount = parseFloat(item.detail['order_amount']);
