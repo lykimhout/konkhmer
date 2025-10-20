@@ -1,6 +1,5 @@
 
 <?php
-header('Access-Control-Allow-Origin: *');
 $msg = array();
 $action = @$_POST['action'];
 
@@ -25,5 +24,6 @@ if($action == "insertdata"){
     echo json_encode($msg);
     //file_put_contents('../database/data.json', $_POST['insertdata']);
 }
+
 
 ?>
