@@ -222,7 +222,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: '../model/insertjson.php',
+            url: './model/insertjson.php',
             data: {action: objOption, data: objArr},
             dataType: "json",
             success: function (data) {
