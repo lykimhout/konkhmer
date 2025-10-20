@@ -1,5 +1,6 @@
 
 <?php
+header('Access-Control-Allow-Origin: *');
 $msg = array();
 $action = @$_POST['action'];
 
